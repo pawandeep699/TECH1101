@@ -1,0 +1,30 @@
+ body {
+     background-color: aquamarine;
+     font-size: smaller;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     border:5px blue;
+     padding: 10px;
+     margin:10px
+     
+
+}
+
+
+pop {
+
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border:3px solid palegoldenrod;
+    padding: 20px;
+    
+
+
+}
+
+p.topi {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-seri;
+    font-size: x-large;
+    border: 2px solid palevioletred;
+    padding:30px;
+    
+}
