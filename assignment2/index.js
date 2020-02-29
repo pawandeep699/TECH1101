@@ -1,4 +1,3 @@
-
 // for input values 
 const x = document.querySelector("#yal");
 
@@ -83,37 +82,61 @@ function taxOwed(val){
 function effectiveTaxRate(val) {
 
 val = x.value;
+let bui;
+if(val<=48535&&val>0) {
+    k = (val*15)/100;
+    b = k/val*100;
+    bui = b.toFixed(2);
+    return document.getElementById("ok").textContent =  bui;
 
-
-
-if(val<=48535) {
-   o =  "15" ;
-   return document.getElementById("ok").textContent = o;
 }
 
+
 else if (val>48535 && val<=97069) {
-        o = "20.5";
-        return document.getElementById("ok").textContent = o;
-    }
+    k = val - 48535;
+    j = (k*20.5)/100;
+    b = j + 7280;
+    t = b/val*100;
+    bui = t.toFixed(2);
+    return document.getElementById("ok").textContent = bui;
+}
+
 
 else if (val>97069 && val<=150473) {
-    o = "26"
-    return  document.getElementById("ok").textContent =o;
+    k = val - 97069;
+    j = (k*26)/100;
+    b = j + 17230;
+    t = b/val*100;
+    bui = t.toFixed(2);
+    return document.getElementById("ok").textContent = bui;
 }
 
 else if (val >150473 && val<=214368){
-    o = "29"
-    return document.getElementById("ok").textContent= o;
+    k = val - 150473;
+    j =(k*29)/100;
+    b = j + 31115;
+    t = b/val*100;
+    bui = t.toFixed(2);
+    return document.getElementById("ok").textContent = bui;
 }
 
-else if (val>214368){
-    o = "33"
-    return  document.getElementById("ok").textContent =o;
+else if (val>214368) {
+    k = val - 214368;
+    j = (k*33)/100;
+    b = j + 49645;
+    t = b/val*100;
+    bui = t.toFixed(2);
+    return  document.getElementById("ok").textContent= bui ;
 }
+
+ else if (val == 0) {
+
+    return document.getElementById("ok").textContent= 0;
+ }
 
 else {
 
-    return document.getElementById("ok").textContent="";
+    return document.getElementById("ok").textContent="";      // returns nothing when non-number value is input.
 }
 
 
@@ -247,4 +270,3 @@ function clearn() {
 button.addEventListener("click",buttonn);
 //clear button
 clear.addEventListener("click",clearn);
-
