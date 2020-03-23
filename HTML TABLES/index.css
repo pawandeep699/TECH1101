@@ -1,0 +1,40 @@
+table , th , td {
+    border: 3px solid red;
+    border-collapse: collapse;
+    Width : 10%;
+}
+
+th , td  {
+    padding:10px;
+    text-align: center;
+}
+
+table#cix {
+
+    background-color: salmon;
+    border: 5px solid black;
+    border-collapse: separate;
+
+}
+
+table#bis tr:nth-child(even){
+
+    background-color: orange;
+
+}
+
+table#bis tr:nth-child(odd){
+
+    background-color: papayawhip;
+
+}
+
+table#bis th {
+
+    background-color: red;
+
+}
+
+table#bis {
+    border-spacing: 10px;
+}
